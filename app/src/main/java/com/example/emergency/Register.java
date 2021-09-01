@@ -21,6 +21,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -38,10 +40,9 @@ public class Register extends AppCompatActivity {
     String userID;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         mFullName   = findViewById(R.id.fullName);
         mEmail      = findViewById(R.id.Email);
         mPassword   = findViewById(R.id.password);
@@ -59,90 +60,74 @@ public class Register extends AppCompatActivity {
         }
 
 
-        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String email = mEmail.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
-                final String fullName = mFullName.getText().toString();
-                final String phone    = mPhone.getText().toString();
+        mRegisterBtn.setOnClickListener(v -> {
+            final String email = mEmail.getText().toString().trim();
+            String password = mPassword.getText().toString().trim();
+            final String fullName = mFullName.getText().toString();
+            final String phone    = mPhone.getText().toString();
 
-                if(TextUtils.isEmpty(email)){
-                    mEmail.setError("Email is Required.");
-                    return;
-                }
+            if(TextUtils.isEmpty(email)){
+                mEmail.setError("Email is Required.");
+                return;
+            }
 
-                if(TextUtils.isEmpty(password)){
-                    mPassword.setError("Password is Required.");
-                    return;
-                }
+            if(TextUtils.isEmpty(password)){
+                mPassword.setError("Password is Required.");
+                return;
+            }
 
-                if(password.length() < 6){
-                    mPassword.setError("Password Must be >= 6 Characters");
-                    return;
-                }
+            if(password.length() < 6){
+                mPassword.setError("Password Must be >= 6 Characters");
+                return;
+            }
 
-                progressBar.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
 
-                // register the user in firebase
+            // register the user in firebase
 
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+            fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
+                if(task.isSuccessful()){
 
-                            // send verification link
+                    // send verification link
 
-                            FirebaseUser fuser = fAuth.getCurrentUser();
-                            fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Toast.makeText(Register.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
-                                }
-                            });
+                    FirebaseUser fuser = fAuth.getCurrentUser();
+                    fuser.sendEmailVerification().addOnSuccessListener(aVoid -> Toast.makeText(Register.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.d(TAG, "onFailure: Email not sent " + e.getMessage()));
 
-                            Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
-                            userID = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("users").document(userID);
-                            Map<String,Object> user = new HashMap<>();
-                            user.put("fName",fullName);
-                            user.put("email",email);
-                            user.put("phone",phone);
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: " + e.toString());
-                                }
-                            });
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
+                    userID = fAuth.getCurrentUser().getUid();
 
-                        }else {
-                            Toast.makeText(Register.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
+                    String user_id=fAuth.getCurrentUser().getUid();
+                    DatabaseReference current_user_db= FirebaseDatabase.getInstance().getReference().child("Users").child("Client").child(user_id);
+                    current_user_db.setValue(true);
+
+                    DocumentReference documentReference = fStore.collection("users").document(userID);
+                    Map<String,Object> user = new HashMap<>();
+                    user.put("fName",fullName);
+                    user.put("email",email);
+                    user.put("phone",phone);
+                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
                         }
-                    }
-                });
-            }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d(TAG, "onFailure: " + e.toString());
+                        }
+                    });
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+                }else {
+                    Toast.makeText(Register.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                }
+            });
         });
 
 
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Login.class));
-            }
-        });
+        mLoginBtn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Login.class)));
 
     }
 }

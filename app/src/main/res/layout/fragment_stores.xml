@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoresFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/text_stores_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/droid_cafe_stores"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/kinda_black"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_rate_stores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_or_stores"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_stores_intro"
+        android:textColor="@color/css_grey"
+        android:textStyle="italic"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_stores"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_rate_stores">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

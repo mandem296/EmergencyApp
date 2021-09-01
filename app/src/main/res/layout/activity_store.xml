@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoreActivity">
+
+    <ImageView
+        android:id="@+id/store_view_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/css_grey"
+        android:paddingBottom="10dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/a_picture_of_balut" />
+
+    <TextView
+        android:id="@+id/store_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignBottom="@id/store_view_image"
+        android:padding="10dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <TextView
+        android:id="@+id/news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/news"
+        android:fontFamily="@font/amsterdam"
+        android:layout_below="@id/store_view_name"
+        android:padding="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/store_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/kinda_black"
+        android:layout_below="@id/news"
+        android:padding="11dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+</RelativeLayout>

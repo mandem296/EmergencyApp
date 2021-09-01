@@ -1,3 +1,287 @@
 <resources>
-    <string name="app_name">AuthenticatorApp</string>
+    <string name="app_name">EmergencyApp</string>
+
+    <string name="home_text">Home</string>
+    <string name="search_text">Search</string>
+    <string name="About_us">About Us</string>
+    <string name="profile_text">Profile</string>
+    <string name="Logout">Log out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_hospital_map">HospitalMapActivity</string>
+
+
+    <resources>
+        <string name="app_name">Droid Cafe</string>
+
+        <string name="tab_label_1">Desserts</string>
+        <string name="tab_label_2">Pastries</string>
+        <string name="tab_label_3">Stores</string>
+        <string name="dessert_recipes">Dessert recipes</string>
+        <string name="pastries_frag">Pastries frag</string>
+        <string name="stores_frag">Stores frag</string>
+        <string name="browse_recipes">Browse recipes</string>
+        <string name="recipe_title">Recipe title</string>
+        <string name="prep_cook_time"><![CDATA[Prep & cook time: 2hrs]]></string>
+        <string name="recipe_short_description">Recipe short description</string>
+        <string name="how_to_prepare_balut">How to prepare Balut</string>
+        <string name="a_picture_of_balut">A picture of balut</string>
+        <string name="recipe_avatar">recipe avatar</string>
+        <string name="pizzas">Pizza</string>
+        <string name="cocktails">Beverages</string>
+        <string name="pasta">Chicken</string>
+        <string name="contact_us">Contact us</string>
+        <string name="about_us">About us</string>
+        <string name="share_app">Share</string>
+        <string name="user_name_text">Davies</string>
+        <string name="email_address_text">Davies@gmail.com</string>
+        <string name="pastries_recipe">Pastries Recipes</string>
+        <string name="droid_cafe_stores">Droid Cafe Stores</string>
+        <string name="rate_or_stores">stores</string>
+        <string name="news">About</string>
+        <string name="open_daily_from_7_00_a_m">Open daily from 8:00 a.m</string>
+        <string name="like">LIKE</string>
+        <string name="comment">COMMENT</string>
+        <string name="share">SHARE</string>
+        <string name="store_name_text">Store name</string>
+        <string name="foods">Foods</string>
+        <string name="communication">Chat</string>
+        <string name="pizza_recipes">Pizza Recipes</string>
+        <string name="cocktails_recipes">Drinks Recipes</string>
+        <string name="pasta_recipes">Pasta Recipes</string>
+
+        <array name="desserts_images">
+            <item>@drawable/detroit_style_pizza</item>
+            <item>@drawable/maxres</item>
+            <item>@drawable/tiramisu</item>
+            <item>@drawable/detroit_style_pizza</item>
+            <item>@drawable/maxres</item>
+            <item>@drawable/tiramisu</item>
+            <item>@drawable/detroit_style_pizza</item>
+            <item>@drawable/maxres</item>
+            <item>@drawable/tiramisu</item>
+        </array>
+
+        <string-array name="desserts_titles">
+            <item>nice</item>
+            <item>black forest </item>
+            <item>Ndech Special</item>
+
+            <item>nice</item>
+            <item>black forest </item>
+            <item>Special</item>
+
+            <item>nice</item>
+            <item>black forest </item>
+            <item>Special</item>
+        </string-array>
+
+        <string-array name="desserts_descriptions">
+            <item> is a creepy mixture of fruits and berries</item>
+            <item>White chocolate with embedded rasp berries and sweet herbs</item>
+            <item>Ndech Special looks chocolatey with strawberry and some weird berries on top</item>
+
+            <item> is a creepy mixture of fruits and berries</item>
+            <item>White chocolate with embedded rasp berries and sweet herbs</item>
+            <item> looks chocolatey with strawberry and some weird berries on top</item>
+
+            <item> is a creepy mixture of fruits and berries</item>
+            <item>White chocolate with embedded rasp berries and sweet herbs</item>
+            <item>looks chocolatey with strawberry and some weird berries on top</item>
+
+        </string-array>
+
+        <array name="pastries_images">
+            <item>@drawable/detroit_style_pizza</item>
+            <item>@drawable/manresa_pastries</item>
+            <item>@drawable/maxres</item>
+            <item>@drawable/raspberry_pastries</item>
+            <item>@drawable/crappy_kochen</item>
+            <item>@drawable/manresa_pastries</item>
+            <item>@drawable/maxres</item>
+            <item>@drawable/raspberry_pastries</item>
+            <item>@drawable/crappy_kochen</item>
+            <item>@drawable/manresa_pastries</item>
+            <item>@drawable/maxres</item>
+            <item>@drawable/raspberry_pastries</item>
+        </array>
+
+        <string-array name="pastries_titles">
+            <item>Crappy kochen</item>
+            <item>Manresa Pastries</item>
+            <item>Maxres Pastries</item>
+            <item>Raspberry Pastries</item>
+            <item>Crappy kochen</item>
+            <item>Manresa Pastries</item>
+            <item>Maxres Pastries</item>
+            <item>Raspberry Pastries</item>
+            <item>Crappy kochen</item>
+            <item>Manresa Pastries</item>
+            <item>Maxres Pastries</item>
+            <item>Raspberry Pastries</item>
+        </string-array>
+
+        <string-array name="pastries_descriptions">
+            <item>Good bake smeared with sugar and over pasted on the inside</item>
+            <item>Curvy bread and tasty paste and a little pepper rained on top</item>
+            <item>Oily bake with sour fruit paste and golden brown finish</item>
+            <item>Star shaped crafting with sandwiched beef and cocktail paste</item>
+            <item>Good bake smeared with sugar and over pasted on the inside</item>
+            <item>Curvy bread and tasty paste and a little pepper rained on top</item>
+            <item>Oily bake with sour fruit paste and golden brown finish</item>
+            <item>Star shaped crafting with sandwiched beef and cocktail paste</item>
+            <item>Good bake smeared with sugar and over pasted on the inside</item>
+            <item>Curvy bread and tasty paste and a little pepper rained on top</item>
+            <item>Oily bake with sour fruit paste and golden brown finish</item>
+            <item>Star shaped crafting with sandwiched beef and cocktail paste</item>
+        </string-array>
+
+        <array name="pizza_images">
+            <item>@drawable/neapolitan_pizza</item>
+            <item>@drawable/detroit_style_pizza</item>
+            <item>@drawable/st_louis_pizza</item>
+            <item>@drawable/neapolitan_pizza</item>
+            <item>@drawable/detroit_style_pizza</item>
+            <item>@drawable/st_louis_pizza</item>
+            <item>@drawable/neapolitan_pizza</item>
+            <item>@drawable/detroit_style_pizza</item>
+            <item>@drawable/st_louis_pizza</item>
+        </array>
+
+        <string-array name="pizza_titles">
+            <item>Neapolitan pizza</item>
+            <item>Detroit pizza</item>
+            <item>St. Louis pizza</item>
+            <item>Neapolitan pizza</item>
+            <item>Detroit pizza</item>
+            <item>St. Louis pizza</item>
+            <item>Neapolitan pizza</item>
+            <item>Detroit pizza</item>
+            <item>St. Louis pizza</item>
+        </string-array>
+
+        <string-array name="pizza_descriptions">
+            <item>The typical Neapolitan pizza toppings are fresh mozzarella, tomatoes, basil leaves, oregano, and olive oil. Since Neapolitan pizza is thin, it isn\'t designed to handle the weight of too many toppings. Read more…</item>
+            <item>Detroit pizza traditionally features pepperoni, brick cheese (usually Wisconsin brick cheese), and tomato sauce. Other typical toppings include mushrooms and olives. Read more…</item>
+            <item>St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano. Because of its firm crust, St. Louis-style pizza can support several toppings of your choice. Read more…</item>
+            <item>The typical Neapolitan pizza toppings are fresh mozzarella, tomatoes, basil leaves, oregano, and olive oil. Since Neapolitan pizza is thin, it isn\'t designed to handle the weight of too many toppings. Read more…</item>
+            <item>Detroit pizza traditionally features pepperoni, brick cheese (usually Wisconsin brick cheese), and tomato sauce. Other typical toppings include mushrooms and olives. Read more…</item>
+            <item>St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano. Because of its firm crust, St. Louis-style pizza can support several toppings of your choice. Read more…</item>
+            <item>The typical Neapolitan pizza toppings are fresh mozzarella, tomatoes, basil leaves, oregano, and olive oil. Since Neapolitan pizza is thin, it isn\'t designed to handle the weight of too many toppings. Read more…</item>
+            <item>Detroit pizza traditionally features pepperoni, brick cheese (usually Wisconsin brick cheese), and tomato sauce. Other typical toppings include mushrooms and olives. Read more…</item>
+            <item>St. Louis pizza features Provel cheese and a sweeter tomato sauce with a hefty dosage of oregano. Because of its firm crust, St. Louis-style pizza can support several toppings of your choice. Read more…</item>
+        </string-array>
+
+        <array name="cocktail_images">
+            <item>@drawable/mojito</item>
+            <item>@drawable/martini</item>
+            <item>@drawable/martini</item>
+            <item>@drawable/mojito</item>
+            <item>@drawable/martini</item>
+            <item>@drawable/martini</item>
+            <item>@drawable/mojito</item>
+            <item>@drawable/martini</item>
+            <item>@drawable/martini</item>
+        </array>
+
+        <string-array name="cocktails_titles">
+            <item>Buda</item>
+            <item>kinywaji</item>
+            <item>fresh</item>
+            <item>Buda</item>
+            <item>kinywaji</item>
+            <item>fresh</item>
+            <item>Buda</item>
+            <item>kinywaji</item>
+            <item>fresh</item>
+        </string-array>
+
+        <string-array name="cocktails_descriptions">
+            <item>The Mai Tai is a cocktail based on rum, Curaçao liqueur, orgeat syrup, and lime juice, associated with Polynesian-style settings</item>
+            <item>Classic Gin Martini Cocktail. The archetypal gin serve, the Gin MARTINI Cocktail was an icon of the 20th century, and is more popular than ever in the 21st</item>
+            <item>The mojito is one of the most famous rum-based highballs. There are several versions of the mojito</item>
+            <item>The Mai Tai is a cocktail based on rum, Curaçao liqueur, orgeat syrup, and lime juice, associated with Polynesian-style settings</item>
+            <item>Classic Gin Martini Cocktail. The archetypal gin serve, the Gin MARTINI Cocktail was an icon of the 20th century, and is more popular than ever in the 21st</item>
+            <item>The mojito is one of the most famous rum-based highballs. There are several versions of the mojito</item>
+            <item>The Mai Tai is a cocktail based on rum, Curaçao liqueur, orgeat syrup, and lime juice, associated with Polynesian-style settings</item>
+            <item>Classic Gin Martini Cocktail. The archetypal gin serve, the Gin MARTINI Cocktail was an icon of the 20th century, and is more popular than ever in the 21st</item>
+            <item>The mojito is one of the most famous rum-based highballs. There are several versions of the mojito</item>
+        </string-array>
+
+        <array name="pasta_images">
+            <item>@drawable/chorizo</item>
+            <item>@drawable/oldelhi</item>
+            <item>@drawable/madras</item>
+            <item>@drawable/chorizo</item>
+            <item>@drawable/oldelhi</item>
+            <item>@drawable/madras</item>
+            <item>@drawable/chorizo</item>
+            <item>@drawable/oldelhi</item>
+            <item>@drawable/madras</item>
+        </array>
+
+        <string-array name="pasta_titles">
+            <item>Chicken and chorizo jambalaya</item>
+            <item>Old Delhi-style butter chicken</item>
+            <item>Chicken madras</item>
+            <item>Chicken and chorizo jambalaya</item>
+            <item>Old Delhi-style butter chicken</item>
+            <item>Chicken madras</item>
+            <item>Chicken and chorizo jambalaya</item>
+            <item>Old Delhi-style butter chicken</item>
+            <item>Chicken madras</item>
+        </string-array>
+
+        <string-array name="pasta_descriptions">
+            <item>Chicken and chorizo jambalaya is a Creole and Cajun rice dish of West African, French (especially Provençal cuisine), and Spanish influence, consisting mainly of meat and vegetables mixed with rice.</item>
+            <item>Old Delhi-style butter chicken is a curry of chicken in a spiced tomato, butter and cream sauce.</item>
+            <item>Chicken Madras is an Indian curry consisting of pieces of chicken in a spicy, tomato sauce.</item>
+            <item>Chicken and chorizo jambalaya is a Creole and Cajun rice dish of West African, French (especially Provençal cuisine), and Spanish influence, consisting mainly of meat and vegetables mixed with rice.</item>
+            <item>Old Delhi-style butter chicken is a curry of chicken in a spiced tomato, butter and cream sauce.</item>
+            <item>Chicken Madras is an Indian curry consisting of pieces of chicken in a spicy, tomato sauce.</item>
+            <item>Chicken and chorizo jambalaya is a Creole and Cajun rice dish of West African, French (especially Provençal cuisine), and Spanish influence, consisting mainly of meat and vegetables mixed with rice.</item>
+            <item>Old Delhi-style butter chicken is a curry of chicken in a spiced tomato, butter and cream sauce.</item>
+            <item>Chicken Madras is an Indian curry consisting of pieces of chicken in a spicy, tomato sauce.</item>
+        </string-array>
+
+        <array name="stores_images">
+            <item>@drawable/java</item>
+            <item>@drawable/artcaffe</item>
+            <item>@drawable/java</item>
+            <item>@drawable/java</item>
+            <item>@drawable/artcaffe</item>
+            <item>@drawable/java</item>
+            <item>@drawable/basket1</item>
+            <item>@drawable/artcaffe</item>
+            <item>@drawable/java</item>
+        </array>
+
+        <string-array name="stores_names">
+            <item>Java</item>
+            <item>Artcaffé</item>
+            <item>Java House2</item>
+            <item>Java</item>
+            <item>Artcaffé</item>
+            <item>Java House</item>
+            <item>Java House 2</item>
+            <item>Artcaffé</item>
+            <item>Java House</item>
+        </string-array>
+
+        <string-array name="stores_descriptions">
+            <item>Java is South Africa\'s favourite chain of seafood restaurants. There\'s one near you. At Ocean Basket you\'ll find friendly people, a home-from-home feeling and great value for your hard-earned bucks. Some Ocean Baskets have a fresh-fish deli too, and you can order to eat in or takeaway, whatever grabs you.</item>
+            <item>More than a restaurant, Artcaffé is a lifestyle and a social hub in the buzzing capital of Kenya. We are firm believers that dining is about so much more than food. We combine inspirational spaces, quality products, and a sense of community to give you the full Artcaffé experience</item>
+            <item>Java House, commonly referred to as \‘Nairobi Java\’,opened its first store in 1999 at Adam\’s Arcade in Nairobi. With the aim of introducing gourmet coffee drinking culture in Kenya, the first outlet was a coffee shop and later the brand evolved to an American diner style restaurant to its present-day status as a 3 -day part coffee-led, casual dining concept</item>
+            <item>Java is South Africa\'s favourite chain of seafood restaurants. There\'s one near you. At Ocean Basket you\'ll find friendly people, a home-from-home feeling and great value for your hard-earned bucks. Some Ocean Baskets have a fresh-fish deli too, and you can order to eat in or takeaway, whatever grabs you.</item>
+            <item>More than a restaurant, Artcaffé is a lifestyle and a social hub in the buzzing capital of Kenya. We are firm believers that dining is about so much more than food. We combine inspirational spaces, quality products, and a sense of community to give you the full Artcaffé experience</item>
+            <item>Java House, commonly referred to as \‘Nairobi Java\’,opened its first store in 1999 at Adam\’s Arcade in Nairobi. With the aim of introducing gourmet coffee drinking culture in Kenya, the first outlet was a coffee shop and later the brand evolved to an American diner style restaurant to its present-day status as a 3 -day part coffee-led, casual dining concept</item>
+            <item>Java is South Africa\'s favourite chain of seafood restaurants. There\'s one near you. At Ocean Basket you\'ll find friendly people, a home-from-home feeling and great value for your hard-earned bucks. Some Ocean Baskets have a fresh-fish deli too, and you can order to eat in or takeaway, whatever grabs you.</item>
+            <item>More than a restaurant, Artcaffé is a lifestyle and a social hub in the buzzing capital of Kenya. We are firm believers that dining is about so much more than food. We combine inspirational spaces, quality products, and a sense of community to give you the full Artcaffé experience</item>
+            <item>Java House, commonly referred to as \‘Nairobi Java\’,opened its first store in 1999 at Adam\’s Arcade in Nairobi. With the aim of introducing gourmet coffee drinking culture in Kenya, the first outlet was a coffee shop and later the brand evolved to an American diner style restaurant to its present-day status as a 3 -day part coffee-led, casual dining concept</item>
+        </string-array>
+
+    </resources>
+
+
+
 </resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BalutActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/balut_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/balut_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/css_grey"
+                android:paddingBottom="10dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/a_picture_of_balut" />
+
+            <TextView
+                android:id="@+id/balut_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_title"
+                android:textColor="#FFFF00"
+                android:layout_alignBottom="@id/balut_image"
+                android:padding="10dp"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            <TextView
+                android:id="@+id/balut_prep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prep_cook_time"
+                android:textColor="?android:textColorSecondary"
+                android:layout_below="@id/balut_title"
+                android:drawableStart="@drawable/prep_time_ic"
+                android:padding="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:drawableLeft="@drawable/prep_time_ic" />
+
+            <View
+                android:id="@+id/balut_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/balut_prep"
+                android:background="@color/css_grey"/>
+
+            <TextView
+                android:id="@+id/balut_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipe_short_description"
+                android:textColor="@color/kinda_black"
+                android:layout_below="@id/balut_divider"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balut_card_view">
+
+        <TextView
+            android:id="@+id/balut_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/kinda_black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

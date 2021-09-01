@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/recipe_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/css_grey"
+            android:paddingBottom="10dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/recipe_avatar" />
+
+        <TextView
+            android:id="@+id/recipe_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_title"
+            android:textColor="#FFFF00"
+            android:layout_alignBottom="@id/recipe_image"
+            android:padding="10dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <TextView
+            android:id="@+id/recipe_prep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prep_cook_time"
+            android:textColor="?android:textColorSecondary"
+            android:layout_below="@id/recipe_title"
+            android:drawableStart="@drawable/prep_time_ic"
+            android:drawablePadding="11sp"
+            android:padding="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:drawableLeft="@drawable/prep_time_ic" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/recipe_prep"
+            android:background="@color/css_grey"/>
+
+        <TextView
+            android:id="@+id/recipe_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_short_description"
+            android:textColor="@color/kinda_black"
+            android:layout_below="@id/divider"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

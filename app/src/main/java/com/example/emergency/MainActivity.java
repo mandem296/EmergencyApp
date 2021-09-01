@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         userId = fAuth.getCurrentUser().getUid();
-         user = fAuth.getCurrentUser();
+        user = fAuth.getCurrentUser();
 
         if(!user.isEmailVerified()){
             verifyMsg.setVisibility(View.VISIBLE);
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                       // close
+                        // close
                     }
                 });
 

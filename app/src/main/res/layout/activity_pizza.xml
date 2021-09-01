@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PizzaActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:logo="@mipmap/food_logo"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_toolbar"
+        app:titleTextAppearance="@style/app_title"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <TextView
+        android:id="@+id/text_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pizza_recipes"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/kinda_black"
+        android:layout_below="@id/tool_bar"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_browse_recipes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/browse_recipes"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/text_intro"
+        android:textColor="@color/css_grey"
+        android:textStyle="italic"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_pizza"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_browse_recipes" />
+
+</RelativeLayout>
